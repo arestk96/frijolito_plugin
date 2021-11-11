@@ -1,0 +1,124 @@
+<link href="style.css" rel="stylesheet" type="text/css" />
+<header id="main-header">
+
+<html>
+
+<style>
+#myDIV {
+  //width: 600;
+  //padding: 50px 0;
+  //text-align: center;
+  //background-color: lightblue;
+  //margin-top: 20px;
+}
+
+#myDIV2 {
+  //width: 600;
+  //padding: 50px 0;
+  //text-align: center;
+  //background-color: lightblue;
+  //margin-top: 20px;
+}
+</style>
+
+	<a id="logo-header" href="index.html">
+		<span class="site-name">Invernadero</span>
+		<span class="site-desc">Invernadero controlado por Arduino via web</span>
+	</a> <!-- / #logo-header -->
+
+	<nav>
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="acerca.html">Acerca de</a></li>
+			<li><a href="#"></a></li>
+		</ul>
+	</nav><!-- / nav -->
+
+</header><!-- / #main-header -->
+
+
+<section id="main-content">
+
+	<article>
+		<header>
+			<h1>Proyecto Frijolito</h1>
+		</header>
+
+		<div class="content">
+	<body>
+	<div style='text-align:center;'>
+
+    <h2>Humedad Suelo</h2>
+    <input type=submit value='ON' style='width:240px;height:108px;background-color: #84B1FF;color: snow;font-size:18pt;' onClick="location.href='/hson.php'">
+    <input type=submit value='OFF' style='width:240px;height:108px;background-color: #84B1FF;color: snow;font-size:18pt;' onClick="location.href='/hsoff.php'">
+	<br>
+
+    <h2>Temperatura y Humedad</h2>
+    <input type=submit value='ON' style='width:240px;height:108px;background-color: #84B1FF;color: snow;font-size:18pt;' onClick="location.href='/thon.php'">
+    <input type=submit value='OFF' style='width:240px;height:108px;background-color: #84B1FF;color: snow;font-size:18pt;' onClick="location.href='/thoff.php'">
+	<br>
+
+    <h2>Bomba</h2>
+    <input type=submit value='ON' style='width:240px;height:108px;background-color: #84B1FF;color: snow;font-size:18pt;' onClick="location.href='/mton.php'">
+    <input type=submit value='OFF' style='width:240px;height:108px;background-color: #84B1FF;color: snow;font-size:18pt;' onClick="location.href='/mtoff.php'">
+	<br>
+
+    <h2>Fan</h2>
+    <input type=submit value='ON' style='width:240px;height:108px;background-color: #84B1FF;color: snow;font-size:18pt;' onClick="location.href='/fanon.php'">
+    <input type=submit value='OFF' style='width:240px;height:108px;background-color: #84B1FF;color: snow;font-size:18pt;' onClick="location.href='/fanoff.php'">
+	<br>
+
+   <br>
+   <div style='text-align:center; font-size:22pt;'><b>
+   <b>Estados</b>
+   <br><br>
+   </div>
+
+   <center><iframe src="estados.php" height="280" width="600"></iframe></center>
+
+	<center><button onclick="myFunction()">Temperatura y Humedad</button>
+
+	<div id="myDIV">
+	<iframe src="/tabla.php" width="600" height="400" scrolling="auto"></iframe>
+	</div>
+	</center>
+
+	<center><button onclick="myFunction2()">Humedad y Nivel</button>
+
+	<div id="myDIV2">
+	<iframe src="/tabla2.php" width="600" height="400" scrolling="auto"></iframe>
+	</div>
+	</center>
+		</div>
+
+	</article>	<!-- / article -->
+
+</section><!-- / #main-content -->
+
+<script>
+	function myFunction() {
+	var x = document.getElementById("myDIV");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+	}
+
+	function myFunction2() {
+	var x2 = document.getElementById("myDIV2");
+	if (x2.style.display === "none") {
+		x2.style.display = "block";
+	} else {
+		x2.style.display = "none";
+	}
+	}
+	</script>
+
+
+<footer id="main-footer">
+	<p>Enextruking.com</p>
+</footer><!-- / #main-footer -->
+
+</body>
+</html>
